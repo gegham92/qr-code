@@ -1,0 +1,19 @@
+{
+    "name": "marketingsolutions/qr-code",
+    "description": "QR-code",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Gegham Kocharyan",
+            "email": "kocharyan.gegham@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Ms\\QrCode\\": "src/",
+        "Tests\\": "tests/"
+      }
+    }
+}
