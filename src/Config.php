@@ -4,8 +4,15 @@ declare(strict_types=1);
 
 namespace Ms\QrCode;
 
+/**
+ * Class Config
+ * @package Ms\QrCode
+ */
 class Config
 {
+    /**
+     * @return string[]
+     */
     public function value(): array
     {
         return [
