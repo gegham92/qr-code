@@ -6,6 +6,7 @@ namespace Ms\QrCode\QrCodeRender;
 
 use Ms\QrCode\Exceptions\Render\QrCodeRecognizeException;
 use Ms\QrCode\Exceptions\Render\QrCodeRenderException;
+use Ms\QrCode\Config;
 
 /**
  * Class QrCodeRenderWithPython
@@ -25,10 +26,15 @@ class QrCodeRenderWithPython implements QrCodeRenderInterface
      */
     public function run(string $imagePath): string
     {
+        $config = (
+            new Config()
+        )
+            ->value();
+
         $command = sprintf(
             '%s %s %s',
             $this->programmingLanguageRunner,
-            __DIR__ . '/../../python/BarcodeReadDemo_python.py',
+            $config['qr_code_reader_path'],
             $imagePath
         );
 
