@@ -6,7 +6,6 @@ namespace Ms\QrCode\QrCodeRender;
 
 use Ms\QrCode\Exceptions\Render\QrCodeRecognizeException;
 use Ms\QrCode\Exceptions\Render\QrCodeRenderException;
-use Ms\QrCode\Config;
 
 /**
  * Class QrCodeRenderWithPython
