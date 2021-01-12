@@ -6,7 +6,7 @@ namespace Ms\QrCode\QrCodeRender;
 
 /**
  * Interface QrCodeRenderInterface
- * @package Ms\Qr\QrCodeRender
+ * @package Ms\QrCode\QrCodeRender
  */
 interface QrCodeRenderInterface
 {

@@ -8,7 +8,7 @@ use Ms\QrCode\Exceptions\File\PdfNotFoundException;
 
 /**
  * Class Pdf
- * @package Ms\Qr\File
+ * @package Ms\QrCode\File
  */
 class Pdf implements FileRepresentationInterface
 {

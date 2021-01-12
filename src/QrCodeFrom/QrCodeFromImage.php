@@ -9,7 +9,7 @@ use Ms\QrCode\QrCodeRender\QrCodeRenderInterface;
 
 /**
  * Class QrCodeFromImage
- * @package Ms\Qr\QrCodeFrom
+ * @package Ms\QrCode\QrCodeFrom
  */
 class QrCodeFromImage implements QrCodeFromInterface
 {

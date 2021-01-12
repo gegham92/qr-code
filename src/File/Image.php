@@ -8,7 +8,7 @@ use Ms\QrCode\Exceptions\File\ImageNotFoundException;
 
 /**
  * Class Image
- * @package Ms\Qr\File
+ * @package Ms\QrCode\File
  */
 class Image implements FileRepresentationInterface
 {
