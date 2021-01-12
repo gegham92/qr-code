@@ -1,6 +1,6 @@
 ## Usage
 
-Use Ms\Qr\Helper\QrCodeHelper (Facade pattern) to easily use the functionality of library
+Use Ms\QrCode\Helper\QrCodeHelper (Facade pattern) to easily use the functionality of library
 
 Some examples
 
