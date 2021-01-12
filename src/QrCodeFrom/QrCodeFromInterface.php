@@ -6,7 +6,7 @@ namespace Ms\QrCode\QrCodeFrom;
 
 /**
  * Interface QrCodeFromInterface
- * @package Ms\Qr\QrCodeFrom
+ * @package Ms\QrCode\QrCodeFrom
  */
 interface QrCodeFromInterface
 {

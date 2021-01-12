@@ -9,7 +9,7 @@ use Ms\QrCode\QrCodeRender\QrCodeRenderInterface;
 
 /**
  * Class QrCodeFromPdf
- * @package Ms\Qr\QrCodeFrom
+ * @package Ms\QrCode\QrCodeFrom
  */
 class QrCodeFromPdf implements QrCodeFromInterface
 {

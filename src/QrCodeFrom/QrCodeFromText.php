@@ -6,7 +6,7 @@ namespace Ms\QrCode\QrCodeFrom;
 
 /**
  * Class QrCodeFromText
- * @package Ms\Qr\QrCodeFrom
+ * @package Ms\QrCode\QrCodeFrom
  */
 class QrCodeFromText implements QrCodeFromInterface
 {

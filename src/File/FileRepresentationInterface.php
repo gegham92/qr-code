@@ -6,7 +6,7 @@ namespace Ms\QrCode\File;
 
 /**
  * Interface FileRepresentationInterface
- * @package Ms\Qr\File
+ * @package Ms\QrCode\File
  */
 interface FileRepresentationInterface
 {

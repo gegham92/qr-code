@@ -10,7 +10,7 @@ use Ms\QrCode\Config;
 
 /**
  * Class QrCodeRenderWithPython
- * @package Ms\Qr\QrCodeRender
+ * @package Ms\QrCode\QrCodeRender
  */
 class QrCodeRenderWithPython implements QrCodeRenderInterface
 {
