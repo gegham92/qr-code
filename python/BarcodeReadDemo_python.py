@@ -1,7 +1,7 @@
 import sys
 from dbr import *
 
-license_key = 't0077xQAAABlS5Ai90W19dbbDZO9rrPiPF26miN2/swV6Bp+riEuP1SAK7FxNdpolvwv46JAZZSLX8lMUeoEqU78OhqGzgXS5oYEJAFJxKjw='
+license_key = 't0077xQAAADfM4dA6rhDHG960qSZ1K5lsh+LaiqSxeTBV3hTqqGgJ+mZyDYGWk6oGTVOoE3zKECg5c2JWr+Ga4zxiCj1s/gVkdx/jAQfzKWs='
 image = sys.argv[1]
 
 reader = BarcodeReader()
