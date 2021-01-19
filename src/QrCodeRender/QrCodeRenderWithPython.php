@@ -50,7 +50,13 @@ class QrCodeRenderWithPython implements QrCodeRenderInterface
         }
 
         if ($output[0] === 'success') {
-            return $output[1];
+            $result = explode(" ", $output[1]);
+
+            if (count($result) > 1) {
+                return $result[1];
+            }
+
+            return $result[0];
         }
     }
 }
