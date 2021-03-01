@@ -55,7 +55,7 @@ class QrCodeFromImageTest extends TestCase
         $image = __DIR__ . '/../../files/qrcodes_images/imageWithoutQrCode.jpg';
 
         $this->expectException(\Exception::class);
-        $this->expectErrorMessage('Recognizing qr code.');
+        $this->expectErrorMessage('Original system could not scan Qr-code.');
 
         (
             new QrCodeFromImage(

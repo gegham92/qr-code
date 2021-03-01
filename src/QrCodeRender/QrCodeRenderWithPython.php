@@ -6,6 +6,7 @@ namespace Ms\QrCode\QrCodeRender;
 
 use Ms\QrCode\Exceptions\Render\QrCodeRecognizeException;
 use Ms\QrCode\Exceptions\Render\QrCodeRenderException;
+use Ms\QrCode\Exceptions\Render\ScanningServiceInitializationException;
 use Ms\QrCode\Config;
 
 /**
@@ -39,18 +40,24 @@ class QrCodeRenderWithPython implements QrCodeRenderInterface
             $imagePath
         );
 
-        exec($command, $output);
+        exec($command, $_output);
+
+        $output = json_decode($_output[0], true);
 
         if (empty($output)) {
             throw new QrCodeRecognizeException();
         }
 
-        if ($output[0] === 'fail') {
-            throw new QrCodeRenderException($output[1]);
+        if ($output['code'] === 'error') {
+            if (isset($output['result']['code'])) {
+                throw new ScanningServiceInitializationException($output['result']['message']);
+            } else {
+                throw new QrCodeRenderException($output['result']['message']);
+            }
         }
 
-        if ($output[0] === 'success') {
-            $result = explode(" ", $output[1]);
+        if ($output['code'] === 'ok') {
+            $result = explode(" ", $output['result']['barcodeText']);
 
             if (count($result) > 1) {
                 return $result[1];
