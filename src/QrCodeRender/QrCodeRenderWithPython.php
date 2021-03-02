@@ -7,6 +7,7 @@ namespace Ms\QrCode\QrCodeRender;
 use Ms\QrCode\Exceptions\Render\QrCodeRecognizeException;
 use Ms\QrCode\Exceptions\Render\QrCodeRenderException;
 use Ms\QrCode\Exceptions\Render\ScanningServiceInitializationException;
+use Ms\QrCode\Exceptions\Render\ScannedQrCodeInvalidStructureException;
 use Ms\QrCode\Config;
 
 /**
@@ -46,9 +47,7 @@ class QrCodeRenderWithPython implements QrCodeRenderInterface
 
         if (empty($output)) {
             throw new QrCodeRecognizeException();
-        }
-
-        if ($output['code'] === 'error' && isset($output['result']['code'])) {
+        } elseif ($output['code'] === 'error' && isset($output['result']['code'])) {
             throw new ScanningServiceInitializationException($output['result']['message']);
         } elseif ($output['code'] === 'error') {
             throw new QrCodeRenderException($output['result']['message']);
@@ -62,6 +61,8 @@ class QrCodeRenderWithPython implements QrCodeRenderInterface
             }
 
             return $result[0];
+        } else {
+            throw new ScannedQrCodeInvalidStructureException('Scanned Qr-code invalid answer.');
         }
     }
 }
