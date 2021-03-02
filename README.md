@@ -7,7 +7,7 @@ Some examples
 ```php
 use Ms\QrCode\Helper\QrCodeHelper;
 
-$qrCodeFromImage = QrCodeHelper::getQrCodeFromPdf(
+$qrCodeFromImage = QrCodeHelper::getQrCodeFromImage(
     'path_to_image'
 );
 

@@ -5,16 +5,9 @@ from dbr import *
 image = sys.argv[1]
 
 # Config for Dev
-#license_key = 't0075xQAAAGJiZZujUIwvpIW681O5q1rskU56d5gWrb2IpvWricm0ke8Nf29avoAMB6Df+gmZirmCPoMcJ6XcACYgDBzrwBThxAAERSlh'
-#reader = BarcodeReader()
-#error = reader.init_license(license_key)
-
-# Config for Prod
+license_key = '*****QAAA*****UIwvpIW681O5q1rskU5******0ke8Nf29avoAMB6Df******6XcACYgDBzrwBThxAAERSlh'
 reader = BarcodeReader()
-ltspar = reader.init_lts_connection_parameters()
-ltspar.handshakeCode = "100194901-100203182"
-error = reader.init_license_from_lts(ltspar)
-
+error = reader.init_license(license_key)
 
 # If initialization went wrong return error message
 if error[0] != EnumErrorCode.DBR_OK:

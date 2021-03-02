@@ -26,6 +26,8 @@ class QrCodeRenderWithPython implements QrCodeRenderInterface
      * @return string
      * @throws QrCodeRecognizeException
      * @throws QrCodeRenderException
+     * @throws ScannedQrCodeInvalidStructureException
+     * @throws ScanningServiceInitializationException
      */
     public function run(string $imagePath): string
     {
