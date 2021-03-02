@@ -48,12 +48,10 @@ class QrCodeRenderWithPython implements QrCodeRenderInterface
             throw new QrCodeRecognizeException();
         }
 
-        if ($output['code'] === 'error') {
-            if (isset($output['result']['code'])) {
-                throw new ScanningServiceInitializationException($output['result']['message']);
-            } else {
-                throw new QrCodeRenderException($output['result']['message']);
-            }
+        if ($output['code'] === 'error' && isset($output['result']['code'])) {
+            throw new ScanningServiceInitializationException($output['result']['message']);
+        } elseif ($output['code'] === 'error') {
+            throw new QrCodeRenderException($output['result']['message']);
         }
 
         if ($output['code'] === 'ok') {
