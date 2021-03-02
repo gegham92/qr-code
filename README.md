@@ -1,3 +1,5 @@
+## Qr Code Scanner
+
 ## Usage
 
 Use Ms\QrCode\Helper\QrCodeHelper (Facade pattern) to easily use the functionality of library
