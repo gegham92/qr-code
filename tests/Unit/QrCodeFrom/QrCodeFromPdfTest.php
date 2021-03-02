@@ -55,7 +55,7 @@ class QrCodeFromPdfTest extends TestCase
         $pdf = __DIR__ . "/../../files/qrcodes_pdf/pdfWithoutQrCode.pdf";
 
         $this->expectException(\Exception::class);
-        $this->expectErrorMessage('Recognizing qr code.');
+        $this->expectErrorMessage('Original system could not scan Qr-code.');
 
         (
             new QrCodeFromPdf(

@@ -44,7 +44,7 @@ class QrCodeHelperTest extends TestCase
         $image = __DIR__ . "/../../files/qrcodes_images/imageWithoutQrCode.jpg";
 
         $this->expectException(\Exception::class);
-        $this->expectErrorMessage('Recognizing qr code.');
+        $this->expectErrorMessage('Original system could not scan Qr-code.');
 
         QrCodeHelper::getQrCodeFromImage($image);
     }
@@ -84,7 +84,7 @@ class QrCodeHelperTest extends TestCase
         $pdf = __DIR__ . "/../../files/qrcodes_pdf/pdfWithoutQrCode.pdf";
 
         $this->expectException(\Exception::class);
-        $this->expectErrorMessage('Recognizing qr code.');
+        $this->expectErrorMessage('Original system could not scan Qr-code.');
 
         QrCodeHelper::getQrCodeFromPdf($pdf);
     }
