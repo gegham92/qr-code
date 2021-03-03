@@ -8,7 +8,7 @@ namespace Ms\QrCode\QrCodeFrom;
  * Class QrCodeFromText
  * @package Ms\QrCode\QrCodeFrom
  */
-class QrCodeFromText implements QrCodeFromInterface
+class QrCodeFromText implements QrCodeInterface
 {
     /**
      * @var string

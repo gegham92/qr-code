@@ -11,7 +11,7 @@ use Ms\QrCode\QrCodeRender\QrCodeRenderInterface;
  * Class QrCodeFromPdf
  * @package Ms\QrCode\QrCodeFrom
  */
-class QrCodeFromPdf implements QrCodeFromInterface
+class QrCodeFromPdf implements QrCodeInterface
 {
     /**
      * @var string

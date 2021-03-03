@@ -11,7 +11,7 @@ use Ms\QrCode\QrCodeRender\QrCodeRenderInterface;
  * Class QrCodeFromImage
  * @package Ms\QrCode\QrCodeFrom
  */
-class QrCodeFromImage implements QrCodeFromInterface
+class QrCodeFromImage implements QrCodeInterface
 {
     /**
      * @var string

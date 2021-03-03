@@ -8,7 +8,7 @@ namespace Ms\QrCode\QrCodeFrom;
  * Interface QrCodeFromInterface
  * @package Ms\QrCode\QrCodeFrom
  */
-interface QrCodeFromInterface
+interface QrCodeInterface
 {
     /**
      * @return string
