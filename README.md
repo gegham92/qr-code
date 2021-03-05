@@ -11,7 +11,7 @@ use Ms\QrCode\QrCodeRender\QrCodeRenderWithPython;
 
  $qrCode = (
                 new QrCodeFromImage(
-                    new Image('file.pdf'),
+                    new Image('image.jpg'),
                     new QrCodeRenderWithPython()
                 )
             )
